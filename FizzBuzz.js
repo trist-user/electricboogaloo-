@@ -1,9 +1,28 @@
 // TODO: Define constants for the form and the result display area
-
+const formStuff = document.getElementById("form");
+const userInput = document.getElementById("userIn");
+const stufHappen = document.getElementById("result");
 // TODO: Add the first line of the event listener to handle form submission
-
-    // Prevent the form from refreshing the page
+formStuff.addEventListener ("submit", function(){
     event.preventDefault();
+    let x = userInput.value
+    userInput.value= x
+    y = Number(userInput.value)
+    let output;
+    if (y % 3 == 0 && y % 5 == 0){
+        output = "FizzBuzz"
+    }else if(y % 3 == 0){
+        output = "Fizz"
+    }else if(y % 5 == 0){
+        output = "Buzz"
+    }else if (NaN !== y){
+        output = "how dare you try to break MY code, not kewl man"
+    }else {
+        output = y
+}
+result.textContent = output;
+})
+    // Prevent the form from refreshing the page
 
 // TODO: Get the number from the form input
 
@@ -14,4 +33,3 @@
 // Otherwise, set the output to the number itself
 
 // Display the result on the page
-result.textContent = output;
