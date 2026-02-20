@@ -15,10 +15,10 @@ formStuff.addEventListener ("submit", function(){
         output = "Fizz"
     }else if(y % 5 == 0){
         output = "Buzz"
-    }else if (NaN !== y){
-        output = "how dare you try to break MY code, not kewl man"
-    }else {
+    }else if (y + 2 == Number(y) + 2 ){
         output = y
+    }else {
+        output = "how dare you try to break MY code, not kewl man"
 }
 result.textContent = output;
 })
